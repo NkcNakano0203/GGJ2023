@@ -16,7 +16,7 @@ public class QuitButton : MonoBehaviour
     private void Quit()
     {
 #if UNITY_EDITOR
-        UnityEditor.EditorApplication.Exit(0);
+        UnityEditor.EditorApplication.isPlaying = false;
 #else
         Application.Quit();
 #endif
